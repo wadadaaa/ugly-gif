@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #1b3cd2;
+  padding: 20px;
+  color: #333333;
+}
+
+.logo {
+  max-height: 50px;
+  margin-right: 20px;
+}
