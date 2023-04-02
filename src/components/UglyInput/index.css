@@ -1,5 +1,11 @@
+.input-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+}
 input {
-  background-color: #4afc53;
+  background-color: #ffffff;
   box-sizing: border-box;
   appearance: none;
   border-radius: 0px;
@@ -7,12 +13,25 @@ input {
   width: 100%;
   border: 0px;
   margin: 0px;
-  z-index: 2;
-  float: left;
-  position: relative;
   height: 52px;
   letter-spacing: 1px;
   font-size: 18px;
   border-radius: 5px;
   padding: 20px;
+}
+.ugly-button {
+  background-color: #4afc53;
+  border-radius: 5px;
+  display: flex;
+  padding: 0.8em 1.2em;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 100vw;
+  background-color: #4afc53;
+  transition: 0.2s;
+  color: #1d1d1b;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
 }

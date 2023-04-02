@@ -7,9 +7,10 @@ import UglyInput from "./components/UglyInput";
 
 function App() {
   const [gifs, setGifs] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("cat");
 
   useEffect(() => {
-    const fetchAndSetGifs = async (searchTerm) => {
+    const fetchAndSetGifs = async () => {
       try {
         const fetchedGifs = await fetchGifs(searchTerm);
         setGifs(fetchedGifs);
@@ -18,16 +19,14 @@ function App() {
       }
     };
 
-    fetchAndSetGifs("cat"); // Replace 'cat' with any search term you'd like to test
-  }, []);
+    fetchAndSetGifs();
+  }, [searchTerm]);
 
   return (
     <>
       <Header />
       <div className="container">
-        <div className="input-container">
-          <UglyInput />
-        </div>
+        <UglyInput onSubmit={(value) => setSearchTerm(value)} />
         <div className="flex-container">
           {gifs.map((gif) => (
             <div key={gif.id} className="flex-item">
